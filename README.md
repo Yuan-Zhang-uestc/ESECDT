@@ -20,10 +20,9 @@ This project implements an end-to-end encrypted data delivery process ESECDT lev
 ## Dependencies and Environment / 依赖与环境
 
 - Python 3.12（see `11-15/lib/python3.12/site-packages`）。
-- Third-party libraries：`cryptography`, `bplib`, `petlib`, `pycryptodome`（项目已内置）。
+- Third-party libraries：`cryptography`, `bplib`, `petlib`, `pycryptodome`（included in the project）。
 
-Before running the scripts, you can add the built-in site-packages to your environment variable:
-运行脚本前，可将内置 site-packages 加入环境变量：
+Before running the scripts, you can add the built-in site-packages to your environment variable: / 运行脚本前，可将内置 site-packages 加入环境变量：
 
 ```bash
 export PYTHONPATH="$(pwd)/11-15/lib/python3.12/site-packages:$PYTHONPATH"
@@ -41,8 +40,7 @@ export PYTHONPATH="$(pwd)/11-15/lib/python3.12/site-packages:$PYTHONPATH"
 
 ### Run the Main Experiment / 运行主实验
 
-By default, 500 MB of random data is generated. For the first run, please ensure sufficient memory/disk space. You can reduce the value in `data.generate(1024 * 1024 * 500)` for faster debugging.
-默认会生成 500MB 随机数据，第一次运行请确保有足够内存/磁盘，并可将 `data.generate(1024 * 1024 * 500)` 改为更小值加快调试。
+By default, 500 MB of random data is generated. For the first run, please ensure sufficient memory/disk space. You can reduce the value in `data.generate(1024 * 1024 * 500)` for faster debugging. / 默认会生成 500MB 随机数据，第一次运行请确保有足够内存/磁盘，并可将 `data.generate(1024 * 1024 * 500)` 改为更小值加快调试。
 
 ```bash
 python trade.py          # ESECDT
@@ -50,8 +48,7 @@ python fresh+AE.py       # fresh + AE
 python naive.py          # DH + AE
 ```
 
-The scripts will print the average time for each phase (delegate / DRcv / retrieve / deliver / BRcv) and the total time, and verify the correctness of decryption.
-脚本会打印各阶段平均耗时（delegate / DRcv / retrieve / deliver / BRcv）与总耗时，并校验解密正确性。
+The scripts will print the average time for each phase (delegate / DRcv / retrieve / deliver / BRcv) and the total time, and verify the correctness of decryption. / 脚本会打印各阶段平均耗时（delegate / DRcv / retrieve / deliver / BRcv）与总耗时，并校验解密正确性。
 
 ### Generate Random Data / 生成随机数据
 
@@ -59,8 +56,7 @@ The scripts will print the average time for each phase (delegate / DRcv / retrie
 python -c "import data; print(data.generate(32))"
 ```
 
-This returns a hexadecimal random string of the specified byte length.
-将返回指定字节数的十六进制随机串。
+This returns a hexadecimal random string of the specified byte length. / 将返回指定字节数的十六进制随机串。
 
 ## Notes / 注意事项
 
