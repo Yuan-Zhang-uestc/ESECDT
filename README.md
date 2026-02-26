@@ -1,5 +1,4 @@
-# Subscripton-Based Entrust Delivery Experimental Framework
-# 订阅式托管交付实验框架
+# Subscripton-Based Entrust Delivery Experimental Framework / 订阅式托管交付实验框架
 
 This project implements an end-to-end encrypted data delivery process ESECDT leveraging public-key encryption with keyword search (PEKS), proxy re-encryption (PRE), and double ratchet key agreement (DR). It is used ri evaluate the performance of different key management strategies (`trade.py`, `fresh+AE.py`, `naive.py`) in large data transmission scenarios.
 该项目实现了一个结合 **公钥可搜索加密**、**代理重加密** 与 **双棘轮密钥协商** 的端到端加密数据交易流程，用于评估不同密钥管理策略（`trade.py`、`fresh+AE.py`、`naive.py`）在大数据传输场景下的性能。
